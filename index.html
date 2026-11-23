@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Documents</title>
+  <meta name="description" content="View our Privacy Policy and Terms and Conditions." />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    main {
+      width: min(100%, 680px);
+      background: #fff;
+      border: 1px solid #e5e9f2;
+      border-radius: 20px;
+      padding: clamp(24px, 5vw, 44px);
+      box-shadow: 0 14px 40px rgba(24, 39, 75, .08);
+    }
+    .eyebrow { color: #5b6b8a; font-size: .85rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 12px 0; font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }
+    .intro { color: #58657c; line-height: 1.65; margin: 0 0 28px; }
+    .links { display: grid; gap: 14px; }
+    a.card {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      text-decoration: none; color: inherit; border: 1px solid #e5e9f2;
+      border-radius: 14px; padding: 18px 20px; transition: .18s ease;
+    }
+    a.card:hover { border-color: #7c8cff; background: #f8f9ff; transform: translateY(-1px); }
+    .title { font-weight: 700; margin-bottom: 4px; }
+    .desc { color: #65718a; font-size: .92rem; line-height: 1.45; }
+    .arrow { font-size: 1.25rem; color: #5267e8; flex-shrink: 0; }
+    footer { margin-top: 28px; color: #8993a7; font-size: .82rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Legal information</div>
+    <h1>Legal Documents</h1>
+    <p class="intro">Please review the following documents to understand our policies and terms of use.</p>
+    <div class="links">
+      <a class="card" href="./privacy-policy.html">
+        <div>
+          <div class="title">Privacy Policy</div>
+          <div class="desc">Learn how information is collected, used, and protected.</div>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="card" href="./terms-and-conditions.html">
+        <div>
+          <div class="title">Terms and Conditions</div>
+          <div class="desc">Review the terms that apply to using our services.</div>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <footer>© <span id="year"></span> · Legal Documents</footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
